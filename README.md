@@ -7,7 +7,7 @@ This repository is part of an AR-based project designed to visualize optimal ele
 This project has been developed using **Unity 2022.3.9f1**. Its main goal is to **overlay an avatar onto a real subject**, marking the proper electrode positions with cylinders based on the aforementioned methods.  
 
 - The avatar model was downloaded from **Mixamo** and modified in **Blender** to make certain parts transparent, focusing on relevant body areas.  
-- The avatar file used is **SlicedAvatar.fbx**.  
+- The avatar file used is **SlicedAvatar.fbx** (`Assets/Character/SlicedAvatar.fbx`).  
 - Both the **avatar and the real person must align in the same position**.  
 
 To achieve this alignment, a **QR Code-based positioning system** is used to place the avatar at a known and suitable position for the subject to stand.  
