@@ -1,46 +1,23 @@
-# Barcode and QR Code handling in Unity with ZXing.NET
+# Electrode Positioning AR application
 
-This is the corresponding github repository for the video tutorial series about "Barcode and QRCode in Unity with ZXing.NET - A guide for Standalone, Android, WebGL and Hololens". Using additional functionality with ZXing.NET, AR Foundation and OpenXR. :)
+This repository is part of an AR-based project designed to visualize optimal electrode placement, ensuring high-quality muscle activation signals and a streamlined process. Placement is determined using methods such as the SENIAM guidelines and the Atlas of Muscle Innervation Zones.
 
+This project has been developed in Unity editor version 2022.3.9f1.
+
+The goal of this project is to overlap an avatar which will contain some cylinders on it marking the proper electrode's location based on the aforementioned methods with a real subject. Therefore, both the avatar and the person should stand at the same position. In order to achieve this, a QR Code position will be used to position the avatar in a suitable position for a person to stand.
+
+After some research, the corresponding github repository (https://github.com/FireDragonGameStudio/Unity-ZXing-BarQrCodeHandling.git) for the video tutorial series about "Barcode and QRCode in Unity with ZXing.NET - A guide for Standalone, Android, WebGL and Hololens" was used. 
 Tutorial Video - https://www.youtube.com/watch?v=tJXvynhbmpg
 
-Example code generators:
-- https://www.qr-code-generator.com/
-- https://barcode.tec-it.com/en/Code128
+This application allows us to scan a QR code position and place a GameObject at that location. As was explained before, this is the idea that we wanted to follow. Therefore, the "QRCode.cs" script (Assets/Scripts/Hololens/MicrosoftSample) was adapted to our application by applying some offsets to stablish the desired avatar position at a known and suitable position for a person to stand.
 
-ZXing.NET Barcode and QR Code Github repo:
-- https://github.com/micjahn/ZXing.Net
 
-Unity WebcamTexture GetPixels32:
-- https://docs.unity3d.com/ScriptReference/WebCamTexture.GetPixels32.html
+-Another key point to obtain the proper electrode position is that the avatar should be properly scaled based on the real subject body measurements. This is achieved manually by the "ScalingBody.cs" script (Assets/Scripts/Avatar/ScalingBody).
 
-Unity AR Foundation:
-- https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@5.0/manual/index.html
+-The main script that applies the methodology (SENIAM and Atlas of IZs) to compute and create marks (cylinders) onto the avatar is "SEMGPositioning" (Assets/Scripts/Avatar/SEMGPositioning.cs)
 
-Unity AR Foundation XRCPUImage Hololens support:
-- https://github.com/Unity-Technologies/arfoundation-samples/issues/562
-- https://docs.unity3d.com/Packages/com.unity.xr.windowsmr@5.4/manual/index.html
+-To refine the application and make it easier to use, a finner adjustment of the landmarks needed to compute the proper electrode's positions is needed. Therefore, a .json dictionary (Assets/Scripts/Avatar/database.json) has been created to store all those displacement values of the landmarks based on the studied subject thanks to the "DataManager" script (Assets/Scripts/Avatar/DataManager.cs) that was also coded to manage all this. Like so, in case the subject has already tried the application, those settings are loaded so the position is almost the proper one directly.
 
-Unity ARFoundation, get CPU camera image:
-- https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@5.0/manual/cpu-camera-image.html#synchronously-convert-to-grayscale-and-color
+All the scripts are coded in C#
 
-Microsoft MR Feature tool
-- https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unity/welcome-to-mr-feature-tool
 
-Microsoft OpenXR without MRTK
-- https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unity/new-openxr-project-without-mrtk
-
-Microsoft QR Code tracking
-- https://docs.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/qr-code-tracking-overview
-
-Microsoft QR Code tracking repo
-- https://github.com/microsoft/MixedReality-QRCode-Sample
-
-Microsoft QR Code tracking OpenXR repo
-- https://github.com/microsoft/MixedReality-QRCode-Sample/tree/OpenXR
-
-Microsoft QR Code NuGet package
-- https://www.nuget.org/Packages/Microsoft.MixedReality.QR
-
-Unity WebGL webcam browser access
-- https://docs.unity3d.com/2022.1/Documentation/Manual/webgl-browser-access-device.html
