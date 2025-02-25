@@ -8,11 +8,10 @@ This project has been developed using **Unity 2022.3.9f1**. Its main goal is to 
 
 - The avatar model was downloaded from **Mixamo** and modified in **Blender** to make certain parts transparent, focusing on relevant body areas.  
 - The avatar file used is **SlicedAvatar.fbx** (`Assets/Character/SlicedAvatar.fbx`).  
-- Both the **avatar and the real person must align in the same position**.  
 
-To achieve this alignment, a **QR Code-based positioning system** is used to place the avatar at a known and suitable position for the subject to stand.
+The subject is wearing **IMUs (XSens)**, which are connected to **MVN Analyze/Animate software**. This allows the real-time tracking of the subject’s movements, which are then sent to Unity through the **MVN Unity Live Plugin** (located in `packages/com.movella.xsens`). This integration ensures a more accurate overlay of the avatar by tracking the subject's movement.
 
-Additionally, the subject is wearing **IMUs (XSens)** that are connected to **MVN Analyze/Animate software**. This software tracks the subject's movement in real time, and the **MVN Unity Live Plugin** (located in `packages/com.movella.xsens`) is used to connect Unity with the MVN software, allowing the avatar to dynamically track the subject’s movements for better overlay accuracy.
+To ensure proper alignment between the avatar and the real person, both need to stand in the same position. A **QR Code-based positioning system** is used to place the avatar at a known and suitable position for the subject to stand, resolving the alignment challenge.
 
 ## **QR Code Positioning**  
 
