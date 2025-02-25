@@ -10,7 +10,9 @@ This project has been developed using **Unity 2022.3.9f1**. Its main goal is to 
 - The avatar file used is **SlicedAvatar.fbx** (`Assets/Character/SlicedAvatar.fbx`).  
 - Both the **avatar and the real person must align in the same position**.  
 
-To achieve this alignment, a **QR Code-based positioning system** is used to place the avatar at a known and suitable position for the subject to stand.  
+To achieve this alignment, a **QR Code-based positioning system** is used to place the avatar at a known and suitable position for the subject to stand.
+
+Additionally, the subject is wearing **IMUs (XSens)** that are connected to **MVN Analyze/Animate software**. This software tracks the subject's movement in real time, and the **MVN Unity Live Plugin** (located in `packages/com.movella.xsens`) is used to connect Unity with the MVN software, allowing the avatar to dynamically track the subject’s movements for better overlay accuracy.
 
 ## **QR Code Positioning**  
 
@@ -43,3 +45,5 @@ This application allows scanning a **QR code** and placing a **GameObject** at t
 - **Programming Language:** C#  
 - **3D Modeling Tools:** Blender, Mixamo  
 - **QR Code Handling:** ZXing.NET  
+- **Motion Capture Integration:** MVN Unity Live Plugin (Packages/com.movella.xsens)  
+- **Hardware:** XSens IMUs (worn by the subject), HoloLens 2  
