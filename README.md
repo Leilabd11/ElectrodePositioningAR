@@ -43,6 +43,5 @@ This application allows scanning a **QR code** and placing a **GameObject** at t
 - **Game Engine:** Unity (2022.3.9f1)  
 - **Programming Language:** C#  
 - **3D Modeling Tools:** Blender, Mixamo  
-- **QR Code Handling:** ZXing.NET  
 - **Motion Capture Integration:** MVN Unity Live Plugin (Packages/com.movella.xsens)  
 - **Hardware:** XSens IMUs (worn by the subject), HoloLens 2  
