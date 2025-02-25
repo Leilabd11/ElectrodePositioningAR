@@ -16,8 +16,8 @@ To achieve this alignment, a **QR Code-based positioning system** is used to pla
 
 To implement QR-based positioning, this project integrates code from the following repository:  
 
-🔗 **GitHub Repository:** [FireDragonGameStudio/Unity-ZXing-BarQrCodeHandling](https://github.com/FireDragonGameStudio/Unity-ZXing-BarQrCodeHandling)  
-📺 **Tutorial Video:** [Barcode and QRCode in Unity with ZXing.NET](https://www.youtube.com/watch?v=tJXvynhbmpg)  
+**GitHub Repository:** [FireDragonGameStudio/Unity-ZXing-BarQrCodeHandling](https://github.com/FireDragonGameStudio/Unity-ZXing-BarQrCodeHandling)  
+**Tutorial Video:** [Barcode and QRCode in Unity with ZXing.NET](https://www.youtube.com/watch?v=tJXvynhbmpg)  
 
 This application allows scanning a **QR code** and placing a **GameObject** at the scanned position. The script **QRCode.cs** (`Assets/Scripts/Hololens/MicrosoftSample`) was adapted to apply **offsets** that properly position the avatar for the subject.  
 
