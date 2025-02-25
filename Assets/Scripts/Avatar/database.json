@@ -1,0 +1,18 @@
+{
+    "keys": [
+        "Menthy"
+    ],
+    "values": [
+        {
+            "fibulaLateralDisplacement": 0.004100000020116568,
+            "fibulaVerticalDisplacement": -0.05999999865889549,
+            "malleoulusLateralDisplacement": -0.01209999993443489,
+            "malleoulusVerticalDisplacement": -0.0430000014603138,
+            "spinaIliacaLateralDisplacement": 0.021299999207258226,
+            "spinaIliacaVerticalDisplacement": -0.03500000014901161,
+            "patellaLateralDisplacement": -0.014299999922513962,
+            "patellaVerticalDisplacement": 0.0,
+            "patellaFrontalLateralDisplacement": 0.0
+        }
+    ]
+}
